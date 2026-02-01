@@ -197,11 +197,15 @@ body {
   border-radius:25px;
   font-size:32px;
   font-family:'Orbitron';
-  color:#ffdd00;
+  color:white;
   text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffbb00, 0 0 30px #ffaa00;
   box-shadow:0 0 40px #ffdd00, 0 0 60px #ffbb00 inset;
   margin-top:15px;
   font-weight:bold;
+}
+ .hero-cash{
+  color:#000;        /* only text color black */
+  text-shadow:none; /* optional: remove yellow glow so black looks clean */
 }
 
 /* SUBSCRIBE */
@@ -397,11 +401,10 @@ img{
 
   <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="register-btn">
     REGISTER NOW
+  <div class="cash-card hero-cash">CASH PRIZE: 💰 ₹50</div>
   </a>
 </div>
- <!-- BIG UNIQUE CASH PRIZE CARD -->
-  <div class="cash-card">CASH PRIZE: 💰 ₹50</div>
-</div>
+ 
 
 <!-- MAP -->
 <div class="map-section">
@@ -499,6 +502,7 @@ confirmBtn.onclick = () => {
 
 </body>
 </html>
+
 
 
 
