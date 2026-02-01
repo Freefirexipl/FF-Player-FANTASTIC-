@@ -17,18 +17,19 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
-body{
+ 
+body {
   font-family:'Rajdhani', sans-serif;
   color:white;
   text-align:center;
   background:
     linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
     url("bb.png");
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* <- here */
 }
+
 
 /* HEADER */
 .header{
@@ -246,14 +247,15 @@ img{
 
 /* MOBILE */
 @media(max-width:600px){
-  body{
+  body {
     background-image:
       linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
       url("bb-mobile.png");
     background-position: top center;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: scroll; /* <- use scroll on mobile */
   }
+
 
   .hero h1{
     font-size:2rem;
@@ -269,6 +271,20 @@ img{
     padding:20px 55px;
   }
 }
+@media(max-width:600px){
+  .modal-content p {
+    font-size: 18px; /* slightly bigger for small screens */
+    line-height: 1.8;
+  }
+  .modal-content h2 {
+    font-size: 22px;
+  }
+  .register-btn {
+    font-size: 20px;
+    padding: 16px 35px;
+  }
+}
+
 
 
 
@@ -303,9 +319,11 @@ img{
 }
 
 .modal-content p {
-  color: #222;
+  color: #00c3ff; /* matches your blue theme */
   font-size: 16px;
   line-height: 1.6;
+  font-weight: 600;
+  text-shadow: 0 0 6px #000; /* gives contrast on any background */
 }
 
 .close-btn {
