@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Fire X IPL</title>
+<meta name="description" content="Join the Free Fire X IPL duo tournament with cash prizes and competitive matches. Register now to participate!">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Rajdhani', sans-serif;
+  color:white;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
+    url("bb.png");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* HEADER */
+.header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:60px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  z-index:1000;
+}
+
+.logo{
+  font-family:'Orbitron';
+  color:#00c3ff;
+  letter-spacing:3px;
+  text-shadow:0 0 15px #00c3ff;
+}
+
+/* CENTER LOGO IMAGE */
+.center-logo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.center-logo img{
+  height:40px;
+}
+
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* MENU */
+.menu{
+  position:fixed;
+  top:70px;
+  right:20px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(12px);
+  border-radius:15px;
+  padding:10px;
+  display:none;
+  z-index:2000;
+}
+
+.menu a{
+  display:block;
+  padding:12px 25px;
+  margin:8px 0;
+  color:white;
+  text-decoration:none;
+  font-family:'Orbitron';
+  border-radius:10px;
+}
+
+.menu a:hover{
+  background:#00c3ff;
+  color:black;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding-top:60px;
+}
+
+.hero h1{
+  font-family:'Orbitron';
+  font-size:3rem;
+  color:#00c3ff;
+  text-shadow:0 0 25px #00c3ff;
+  letter-spacing:4px;
+}
+
+.register-btn{
+  margin-top:35px;
+  padding:14px 45px;
+  background:#00c3ff;
+  color:black;
+  font-family:'Orbitron';
+  border:none;
+  border-radius:40px;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:0 0 30px #00c3ff;
+  text-decoration:none;
+}
+
+/* MAP */
+.map-section{
+  padding:60px 20px;
+}
+
+.map-section h2{
+  font-family:'Orbitron';
+  color:#00c3ff;
+  margin-bottom:20px;
+  letter-spacing:3px;
+}
+
+.map-img{
+  width:90%;
+  max-width:800px;
+  border-radius:20px;
+  box-shadow:0 0 40px #00c3ff;
+}
+
+/* DETAILS GLASS CARDS */
+.details{
+  margin-top:40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px;
+}
+
+.detail-card{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  padding:12px 30px;
+  border-radius:15px;
+  font-size:20px;
+  font-family:'Orbitron';
+  box-shadow:0 0 25px rgba(0,195,255,0.4);
+  min-width:280px;
+}
+
+.detail-card span{
+  color:#00c3ff;
+}
+
+/* CASH PRIZE BIG UNIQUE CARD */
+.cash-card{
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(15px);
+  padding:20px 40px;
+  border-radius:25px;
+  font-size:32px;
+  font-family:'Orbitron';
+  color:#ffdd00;
+  text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffbb00, 0 0 30px #ffaa00;
+  box-shadow:0 0 40px #ffdd00, 0 0 60px #ffbb00 inset;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+/* SUBSCRIBE */
+.subscribe{
+  margin:40px 0 60px;
+  font-size:22px;
+  font-family:'Orbitron';
+  text-shadow:0 0 10px red;
+}
+
+.subscribe a{
+  color:#ff4444;
+  text-decoration:none;
+}
+
+.social{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column; /* stack vertically */
+  gap:15px; /* space between icons */
+  z-index:3000;
+}
+
+.social img{
+  width:70px;   /* BIG SIZE */
+  height:70px;
+  animation:float 2s infinite;
+}
+
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:60px;
+  padding:25px 10px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  font-size:14px;
+  color:#aaa;
+}
+
+.footer span{
+  color:#00c3ff;
+  font-family:'Orbitron';
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  body{
+    background-image:
+      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
+      url("bb-mobile.png");
+    background-position: top center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .cash-card{
+    font-size:24px;
+    padding:15px 25px;
+  }
+
+  .register-btn{
+    font-size:22px;
+    padding:20px 55px;
+  }
+}
+
+
+
+/* MODAL STYLES */
+.modal {
+  display: flex; /* show on page load */
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(255,255,255,0.95);
+  padding: 25px 35px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 25px #00c3ff;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.modal-content h2 {
+  color: #00c3ff;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ff4444;
+}
+
+</style>
+</head>
+
+<body>
+<!-- INFO MODAL -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>F.F SURVIVAL</h2>
+    <p>
+      Players please....subscribe to SCRS YT   <b>  YouTube Channel....😇😇</b> THANK YOU..💖💖<br>
+      
+    </p>
+  </div>
+</div>
+<div class="header">
+  <div class="logo">FREE FIRE X IPL</div>
+
+  <!-- CENTER LOGO IMAGE -->
+  <div class="center-logo">
+    <img src="logo.png" alt="Free Fire X IPL Logo">
+  </div>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <a href="#home">HOME</a>
+  <a href="YOUR_GOOGLE_FORM_LINK" target="_blank">REGISTER</a>
+  <a href="https://instagram.com/freefirexipl.2k26" target="_blank">INSTAGRAM</a>
+  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">YOUTUBE</a>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <h1>FREE FIRE DUO TOURNAMENT</h1>
+
+  <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="register-btn">
+    REGISTER NOW
+  </a>
+</div>
+
+<!-- MAP -->
+<div class="map-section">
+  <h2>BR BERMUDA  MAP</h2>
+  <img src="MAP.png" class="map-img">
+</div>
+
+<!-- DETAILS -->
+<div class="details">
+  <div class="detail-card"><span>MODE:</span> BR DUO</div>
+  <div class="detail-card"><span>ENTRY:</span> FREE</div>
+  <div class="detail-card"><span>DATE:</span> 8 FEB | 3 PM</div>
+
+  <!-- BIG UNIQUE CASH PRIZE CARD -->
+  <div class="cash-card">CASH PRIZE: 💰 ₹50</div>
+</div>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe">
+  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">
+    MUST SUBSCRIBE SCRS YT 🔔 ▶️
+  </a>
+</div>
+
+<!-- SOCIAL FLOAT ICONS -->
+<div class="social">
+  <!-- YOUTUBE -->
+  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+  </a>
+
+  <!-- INSTAGRAM -->
+  <a href="https://instagram.com/freefirexipl.2k26" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+  </a>
+</div>
+
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 <span>Free Fire X IPL</span> | All Rights Reserved  
+  <br>
+  Official Free Fire Esports Tournament Platform by SCRS Gamers
+</div>
+
+<script>
+function toggleMenu(){
+  let m = document.getElementById("menu");
+  m.style.display = (m.style.display==="block") ? "none" : "block";
+}
+</script>
+<script>
+// Close modal
+const modal = document.getElementById("infoModal");
+const closeBtn = document.querySelector(".close-btn");
+
+closeBtn.onclick = () => modal.style.display = "none";
+
+// Close if clicked outside content
+window.onclick = (e) => {
+  if(e.target == modal) modal.style.display = "none";
+}
+</script>
+
+<!-- SUBSCRIBE MODAL -->
+<div id="subscribeModal" class="modal">
+  <div class="modal-content">
+    <h2>Subscribe to Continue</h2>
+    <p>To access the Free Fire tournament page, you must subscribe to our YouTube channel.</p>
+    <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank" class="register-btn">Subscribe Now</a>
+    <br><br>
+    <button class="register-btn" id="confirmSubscribe">I Subscribed ✅</button>
+    
+  </div>
+</div>
+
+<script>
+const subscribeModal = document.getElementById("subscribeModal");
+const confirmBtn = document.getElementById("confirmSubscribe");
+
+subscribeModal.style.display = "flex";
+document.body.style.overflow = "hidden";
+
+confirmBtn.onclick = () => {
+  subscribeModal.style.display = "none";
+  document.body.style.overflow = "auto";
+};
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
