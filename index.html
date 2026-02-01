@@ -70,6 +70,20 @@ body {
   cursor:pointer;
  margin-left:auto;
 }
+/* EXTRA FIX FOR MOBILE HEADER */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 14px;      /* more smaller */
+    letter-spacing: 1px; /* tighter */
+    max-width: 45%;      /* don't allow it to go under center logo */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .center-logo img {
+    height: 34px; /* slightly smaller center logo */
+  }
+}
 
 /* MENU */
 .menu{
@@ -481,6 +495,7 @@ confirmBtn.onclick = () => {
 
 </body>
 </html>
+
 
 
 
