@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FF X IPL | Match Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'JetBrains Mono', monospace;
+  background:#000814;
+  color:#4fd1ff;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* BACKGROUND */
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at top,#001d3d,#000814),
+    url("bb.png") center/cover no-repeat;
+  opacity:0.2;
+}
+
+/* SCANLINES */
+.scan{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(
+    rgba(79,209,255,0.06) 1px,
+    transparent 1px
+  );
+  background-size:100% 4px;
+  pointer-events:none;
+}
+
+/* TERMINAL */
+.terminal{
+  position:relative;
+  max-width:900px;
+  margin:60px auto;
+  padding:40px;
+  background:rgba(0,8,20,0.85);
+  border:1px solid #4fd1ff;
+  box-shadow:0 0 50px rgba(79,209,255,0.35);
+  border-radius:14px;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+.title{
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* TEXT */
+.line{margin:10px 0}
+.cmd{color:#ffffff}
+.value{color:#4fd1ff}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 32px;
+  border:1px solid #4fd1ff;
+  color:#4fd1ff;
+  text-decoration:none;
+  transition:0.3s;
+  letter-spacing:1px;
+}
+.btn:hover{
+  background:#4fd1ff;
+  color:#000814;
+  box-shadow:0 0 25px rgba(79,209,255,0.8);
+}
+
+/* BLINK CURSOR */
+.cursor{
+  animation:blink 1s infinite;
+}
+@keyframes blink{
+  0%,50%,100%{opacity:1}
+  60%,90%{opacity:0}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .terminal{margin:20px;padding:25px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="scan"></div>
+
+<div class="terminal">
+
+  <div class="header">
+    <div class="title">FREE FIRE X IPL :: MATCH PORTAL</div>
+    <div style="color:#4fd1ff">OPEN LIVE</div>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> EVENT:</span>
+    <span class="value"> DUO TOURNAMENT</span>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> MODE:</span>
+    <span class="value"> BR DUO</span>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> MAP:</span>
+    <span class="value"> BERMUDA</span>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> DATE:</span>
+    <span class="value"> 8 FEB | 3 PM</span>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> ENTRY FEE:</span>
+    <span class="value"> FREE</span>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> PRIZE POOL:</span>
+    <span class="value"> ₹50 CASH</span>
+  </div>
+
+  <div class="line">
+    <span class="cmd">> STATUS:</span>
+    <span class="value"> REGISTRATION OPEN</span>
+    <span class="cursor">_</span>
+  </div>
+
+  <a href="YOUR_GOOGLE_FORM_LINK" class="btn" target="_blank">
+    INITIALIZE REGISTRATION
+  </a>
+  <a href="https://instagram.com/freefirexipl.2k26"class="btn" target="_blank">INSTAGRAM</a>
+  <a href="http://www.youtube.com/@SCRSgamers-y7u" class="btn" target="_blank">YOUTUBE</a>
+
+
+</div>
+
+
+</body>
+</html>
