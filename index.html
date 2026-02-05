@@ -10,16 +10,18 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="logo.png">
 
+<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
- 
+
+/* GLOBAL FONT SYSTEM */
 body {
   font-family:'Rajdhani', sans-serif;
+  font-size:18px;
   color:white;
   text-align:center;
   background:
@@ -27,9 +29,22 @@ body {
     url("bb.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* <- here */
+  background-attachment: fixed;
 }
 
+/* IMPORTANT TEXT */
+h1,h2,h3,
+.logo,
+.menu a,
+.register-btn,
+.detail-card,
+.cash-card,
+.subscribe,
+.footer span,
+.count-title {
+  font-family:'Orbitron', sans-serif;
+  letter-spacing:2px;
+}
 
 /* HEADER */
 .header{
@@ -41,48 +56,28 @@ body {
   backdrop-filter:blur(10px);
   display:flex;
   align-items:center;
-  justify-content:flex-start;
   padding:0 20px;
   z-index:1000;
 }
 
 .logo{
-  font-family:'Orbitron';
   color:#00c3ff;
-  letter-spacing:1px;
-  font: size 10px;
+  font-size:16px;
   text-shadow:0 0 12px #00c3ff;
 }
 
-/* CENTER LOGO IMAGE */
+/* CENTER LOGO */
 .center-logo{
   position:absolute;
   left:50%;
   transform:translateX(-50%);
 }
-
-.center-logo img{
-  height:40px;
-}
+.center-logo img{height:40px;}
 
 .menu-btn{
   font-size:26px;
   cursor:pointer;
   margin-left:auto;
-}
-/* EXTRA FIX FOR MOBILE HEADER */
-@media (max-width: 600px) {
-  .logo {
-    font-size: 14px;      /* more smaller */
-    letter-spacing: 1px; /* tighter */
-    max-width: 45%;      /* don't allow it to go under center logo */
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .center-logo img {
-    height: 34px; /* slightly smaller center logo */
-  }
 }
 
 /* MENU */
@@ -97,35 +92,25 @@ body {
   display:none;
   z-index:2000;
 }
-
 .menu a{
   display:block;
   padding:12px 25px;
   margin:8px 0;
   color:white;
   text-decoration:none;
-  font-family:'Orbitron';
   border-radius:10px;
 }
-
-.menu a:hover{
-  background:#00c3ff;
-  color:black;
-}
+.menu a:hover{background:#00c3ff;color:black;}
 
 /* HERO */
 .hero{
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:flex-start; /* instead of center */
   align-items:center;
-  padding-top:180px; /* controls how high it goes */
+  padding-top:180px;
 }
-
-
 .hero h1{
-  font-family:'Orbitron';
   font-size:3rem;
   color:#00c3ff;
   text-shadow:0 0 25px #00c3ff;
@@ -137,27 +122,41 @@ body {
   padding:14px 45px;
   background:#00c3ff;
   color:black;
-  font-family:'Orbitron';
-  border:none;
   border-radius:40px;
   font-size:18px;
-  cursor:pointer;
   box-shadow:0 0 30px #00c3ff;
   text-decoration:none;
+}
+
+/* COUNTDOWN */
+.count-title{
+  font-size:26px;
+  margin-bottom:20px;
+}
+.countdown{
+  display:flex;
+  gap:20px;
+}
+.time-box{
+  background:rgba(0,8,20,0.8);
+  border:1px solid #4fd1ff;
+  border-radius:12px;
+  width:90px;
+  padding:15px 10px;
+}
+.time-box span{
+  font-size:32px;
+  color:#4fd1ff;
 }
 
 /* MAP */
 .map-section{
   padding:60px 20px;
 }
-
 .map-section h2{
-  font-family:'Orbitron';
   color:#00c3ff;
   margin-bottom:20px;
-  letter-spacing:3px;
 }
-
 .map-img{
   width:90%;
   max-width:800px;
@@ -165,7 +164,7 @@ body {
   box-shadow:0 0 40px #00c3ff;
 }
 
-/* DETAILS GLASS CARDS */
+/* DETAILS */
 .details{
   margin-top:40px;
   display:flex;
@@ -173,84 +172,53 @@ body {
   align-items:center;
   gap:15px;
 }
-
 .detail-card{
   background:rgba(255,255,255,0.15);
-  backdrop-filter:blur(12px);
   padding:12px 30px;
   border-radius:15px;
   font-size:20px;
-  font-family:'Orbitron';
-  box-shadow:0 0 25px rgba(0,195,255,0.4);
-  min-width:280px;
 }
+.detail-card span{color:#00c3ff;}
 
-.detail-card span{
-  color:#00c3ff;
-}
-
-/* CASH PRIZE BIG UNIQUE CARD */
+/* CASH */
 .cash-card{
   background:rgba(255,255,255,0.2);
-  backdrop-filter:blur(15px);
   padding:20px 40px;
   border-radius:25px;
   font-size:32px;
-  font-family:'Orbitron';
-  color:white;
-  text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffbb00, 0 0 30px #ffaa00;
-  box-shadow:0 0 40px #ffdd00, 0 0 60px #ffbb00 inset;
-  margin-top:15px;
   font-weight:bold;
+  margin-top:15px;
+  box-shadow:0 0 40px #ffdd00 inset;
 }
-.hero-cash{
-  color:#000;        /* only text color black */
-  /* optional: remove yellow glow so black looks clean */
-}
-
-
 
 /* SUBSCRIBE */
 .subscribe{
-  margin:40px 0 60px;
   font-size:22px;
-  font-family:'Orbitron';
-  text-shadow:0 0 10px red;
+  margin:40px 0;
 }
+.subscribe a{color:#ff4444;text-decoration:none;}
 
-.subscribe a{
-  color:#ff4444;
-  text-decoration:none;
+/* SOCIAL */
+.social-left{
+  position:fixed;
+  bottom:20px;
+  left:20px;
 }
-
-.social{
+.social-right{
   position:fixed;
   bottom:20px;
   right:20px;
-  display:flex;
-  flex-direction:column; /* stack vertically */
-  gap:15px; /* space between icons */
-  z-index:3000;
 }
-
-.social img{
-  width:70px;   /* BIG SIZE */
-  height:70px;
+.social-left img,
+.social-right img{
+  width:50px;
+  height:50px;
   animation:float 2s infinite;
 }
-
-
 @keyframes float{
   0%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
   100%{transform:translateY(0)}
-}
-
-
-
-img{
-  max-width:100%;
-  height:auto;
 }
 
 /* FOOTER */
@@ -258,159 +226,47 @@ img{
   margin-top:60px;
   padding:25px 10px;
   background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(10px);
   font-size:14px;
   color:#aaa;
 }
 
-.footer span{
-  color:#00c3ff;
-  font-family:'Orbitron';
-}
-
 /* MOBILE */
 @media(max-width:600px){
-  body {
-    background-image:
-      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
-      url("bb-mobile.png"); /* your mobile image */
-    background-position: center top; /* top center, keeps main part visible */
-    background-size: cover;           /* cover full screen height & width */
-    background-repeat: no-repeat;     /* avoid tiling */
-    background-attachment: scroll;    /* scroll with page */
-  }
-
-
-
-
-  .hero h1{
-    font-size:2rem;
-  }
-
-  .cash-card{
-    font-size:24px;
-    padding:15px 25px;
-  }
-
-  .register-btn{
-    font-size:22px;
-    padding:20px 55px;
-  }
+  body{font-size:16px;}
+  .hero h1{font-size:2rem;}
+  .register-btn{font-size:20px;padding:16px 35px;}
+  .cash-card{font-size:24px;padding:15px 25px;}
+  .detail-card{font-size:18px;}
+  .time-box{width:60px;}
+  .time-box span{font-size:22px;}
+  .count-title{font-size:18px;}
 }
-@media(max-width:600px){
-  .modal-content p {
-    font-size: 18px; /* slightly bigger for small screens */
-    line-height: 1.8;
-  }
-  .modal-content h2 {
-    font-size: 22px;
-  }
-  .register-btn {
-    font-size: 20px;
-    padding: 16px 35px;
-  }
-}
-
-
-
-
-/* MODAL STYLES */
-.modal {
-  display: flex; /* show on page load */
-  position: fixed;
-  z-index: 5000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(4px);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: rgba(255,255,255,0.95);
-  padding: 25px 35px;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 400px;
-  box-shadow: 0 0 25px #00c3ff;
-  font-family: 'Rajdhani', sans-serif;
-}
-
-.modal-content h2 {
-  color: #00c3ff;
-  margin-bottom: 15px;
-}
-
-.modal-content p {
-  color: #000; /* readable */
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.8;
-  margin-bottom: 25px; /* add space below paragraph */
-}
-
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #ff4444;
-}
-
 </style>
 </head>
 
 <body>
-<!-- INFO MODAL -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>F.F SURVIVAL</h2>
-    <p>
-      Players please....subscribe to SCRS YT   <b>  YouTube Channel....😇😇</b> THANK YOU..💖💖<br>
-      
-    </p>
-  </div>
-</div>
+
 <div class="header">
   <div class="logo">FREE FIRE X IPL</div>
-
-  <!-- CENTER LOGO IMAGE -->
   <div class="center-logo">
-    <img src="logo.png" alt="Free Fire X IPL Logo">
+    <img src="logo.png">
   </div>
-
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
 
 <div class="menu" id="menu">
   <a href="#home">HOME</a>
-  <a href="info.html">INFORMATION</a>   <!-- NEW -->
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVezGChTIGZSDZkKAxvJNTRY-siucuJYUV5krX_nls05SNsg/viewform?usp=sharing&ouid=112159974131741777429" target="_blank">REGISTER</a>
-  <a href="https://instagram.com/freefirexipl.2k26" target="_blank">INSTAGRAM</a>
-  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">YOUTUBE</a>
+  <a href="info.html">INFORMATION</a>
+  <a href="#">REGISTER</a>
+  <a href="#">INSTAGRAM</a>
+  <a href="#">YOUTUBE</a>
 </div>
 
-
-<!-- HERO -->
 <div class="hero" id="home">
   <h1>FREE FIRE DUO TOURNAMENT</h1>
+  <a class="register-btn">REGISTER NOW</a>
+  <div class="cash-card">CASH PRIZE: 💰 ₹50</div>
 
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVezGChTIGZSDZkKAxvJNTRY-siucuJYUV5krX_nls05SNsg/viewform?usp=sharing&ouid=112159974131741777429" target="_blank" class="register-btn">
-    REGISTER NOW
-  </a>
-<!-- CASH PRIZE NEAR REGISTER -->
-  <div class="cash-card hero-cash">
-    CASH PRIZE: 💰 ₹50
-  </div><br><br><br><br>
- 
- <section class="count-section">
   <div class="count-title">MATCH STARTS IN</div>
   <div class="countdown">
     <div class="time-box"><span id="d">00</span><br>Days</div>
@@ -418,196 +274,52 @@ img{
     <div class="time-box"><span id="m">00</span><br>Min</div>
     <div class="time-box"><span id="s">00</span><br>Sec</div>
   </div>
-</section>
 </div>
 
-
-
-<!---mathch time box-->
-
-<style>.count-section{
-  margin-top:-10px;
-  text-align:center;
-
-}
-
-.count-title{
-  font-family:'Orbitron', sans-serif;
-  color:#4fd1ff;
-  font-size:26px;
-  letter-spacing:3px;
-  margin-bottom:20px;
-  text-shadow:0 0 15px #4fd1ff;
-}
-
-.countdown{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-}
-
-.time-box{
-  background:rgba(0,8,20,0.8);
-  border:1px solid #4fd1ff;
-  box-shadow:0 0 20px rgba(79,209,255,0.4);
-  border-radius:12px;
-  width:90px;
-  padding:15px 10px;
-  font-family:'JetBrains Mono', monospace;
-  color:white;
-}
-
-.time-box span{
-  font-size:32px;
-  color:#4fd1ff;
-  font-weight:bold;
-}
-</style>
-<script>
-const matchDate = new Date("2026-02-08T15:00:00+05:30").getTime();
-
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = matchDate - now;
-
-  if(distance <= 0){
-    document.getElementById("d").innerHTML = "00";
-    document.getElementById("h").innerHTML = "00";
-    document.getElementById("m").innerHTML = "00";
-    document.getElementById("s").innerHTML = "00";
-    document.querySelector(".count-title").innerHTML = "MATCH LIVE 🔴";
-    return;
-  }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("d").innerHTML = days;
-  document.getElementById("h").innerHTML = hours;
-  document.getElementById("m").innerHTML = minutes;
-  document.getElementById("s").innerHTML = seconds;
-}, 1000);
-</script>
-
-
-
-<!-- MAP -->
 <div class="map-section">
-  <h2>BR BERMUDA  MAP</h2>
+  <h2>BR BERMUDA MAP</h2>
   <img src="MAP.png" class="map-img">
 </div>
 
-<!-- DETAILS -->
 <div class="details">
   <div class="detail-card"><span>MODE:</span> BR DUO</div>
   <div class="detail-card"><span>ENTRY:</span> FREE</div>
   <div class="detail-card"><span>DATE:</span> 8 FEB | 3 PM</div>
-
-  <!-- BIG UNIQUE CASH PRIZE CARD -->
   <div class="cash-card">CASH PRIZE: 💰 ₹50</div>
 </div>
 
-<!-- SUBSCRIBE -->
 <div class="subscribe">
-  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">
-    MUST SUBSCRIBE SCRS YT 🔔 ▶️
-  </a>
+  <a href="#">MUST SUBSCRIBE SCRS YT 🔔 ▶️</a>
 </div>
 
-<!-- SOCIAL FLOAT ICONS -->
-<!-- INSTAGRAM - LEFT -->
 <div class="social-left">
-  <a href="https://instagram.com/freefirexipl.2k26" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-  </a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
 </div>
-
-<!-- YOUTUBE - RIGHT -->
 <div class="social-right">
-  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="40">
-  </a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
 </div>
-<style>.social-left{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  z-index:3000;
-}
 
-.social-right{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  z-index:3000;
-}
-
-.social-left img,
-.social-right img{
-  width:50px;
-  height:50px;
-  animation:float 2s infinite;
-}
-</style>
-
-
-<!-- FOOTER -->
 <div class="footer">
   © 2026 <span>Free Fire X IPL</span> | All Rights Reserved  
-  <br>
-  Official Free Fire Esports Tournament Platform by SCRS Gamers
 </div>
 
 <script>
 function toggleMenu(){
-  let m = document.getElementById("menu");
-  m.style.display = (m.style.display==="block") ? "none" : "block";
+  let m=document.getElementById("menu");
+  m.style.display=(m.style.display==="block")?"none":"block";
 }
-</script>
-<script>
-// Close modal
-const modal = document.getElementById("infoModal");
-const closeBtn = document.querySelector(".close-btn");
 
-closeBtn.onclick = () => modal.style.display = "none";
-
-// Close if clicked outside content
-window.onclick = (e) => {
-  if(e.target == modal) modal.style.display = "none";
-}
-</script>
-
-<!-- SUBSCRIBE MODAL -->
-<div id="subscribeModal" class="modal">
-  <div class="modal-content">
-    <h2>Subscribe to Continue</h2>
-    <p>To access the Free Fire tournament page, you must subscribe to our YouTube channel.</p>
-    <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank" class="register-btn">Subscribe Now</a>
-    <br><br>
-    <button class="register-btn" id="confirmSubscribe">I Subscribed ✅</button>
-    
-  </div>
-</div>
-
-<script>
-const subscribeModal = document.getElementById("subscribeModal");
-const confirmBtn = document.getElementById("confirmSubscribe");
-
-subscribeModal.style.display = "flex";
-document.body.style.overflow = "hidden";
-
-confirmBtn.onclick = () => {
-  subscribeModal.style.display = "none";
-  document.body.style.overflow = "auto";
-};
+const matchDate = new Date("2026-02-08T15:00:00+05:30").getTime();
+setInterval(()=>{
+  const now=new Date().getTime();
+  const d=matchDate-now;
+  if(d<=0)return;
+  document.getElementById("d").innerHTML=Math.floor(d/(1000*60*60*24));
+  document.getElementById("h").innerHTML=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+  document.getElementById("m").innerHTML=Math.floor((d%(1000*60*60))/(1000*60));
+  document.getElementById("s").innerHTML=Math.floor((d%(1000*60))/1000);
+},1000);
 </script>
 
 </body>
 </html>
-
-
-
-
-
