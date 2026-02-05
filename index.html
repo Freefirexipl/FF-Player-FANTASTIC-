@@ -392,7 +392,7 @@ img{
 <div class="menu" id="menu">
   <a href="#home">HOME</a>
   <a href="info.html">INFORMATION</a>   <!-- NEW -->
-  <a href="YOUR_GOOGLE_FORM_LINK" target="_blank">REGISTER</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVezGChTIGZSDZkKAxvJNTRY-siucuJYUV5krX_nls05SNsg/viewform?usp=sharing&ouid=112159974131741777429" target="_blank">REGISTER</a>
   <a href="https://instagram.com/freefirexipl.2k26" target="_blank">INSTAGRAM</a>
   <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">YOUTUBE</a>
 </div>
@@ -402,7 +402,7 @@ img{
 <div class="hero" id="home">
   <h1>FREE FIRE DUO TOURNAMENT</h1>
 
-  <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="register-btn">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVezGChTIGZSDZkKAxvJNTRY-siucuJYUV5krX_nls05SNsg/viewform?usp=sharing&ouid=112159974131741777429" target="_blank" class="register-btn">
     REGISTER NOW
   </a>
 <!-- CASH PRIZE NEAR REGISTER -->
@@ -410,6 +410,9 @@ img{
     CASH PRIZE: 💰 ₹50
   </div>
 </div>
+
+
+
 <!---mathch time box-->
 <section class="count-section">
   <div class="count-title">MATCH STARTS IN</div>
@@ -420,7 +423,7 @@ img{
     <div class="time-box"><span id="s">00</span><br>Sec</div>
   </div>
 </section>
- <style>.count-section{
+<style>.count-section{
   margin-top:10px;
   text-align:center;
 }
@@ -457,7 +460,7 @@ img{
   font-weight:bold;
 }
 </style>
- <script>
+<script>
 const matchDate = new Date("2026-02-08T15:00:00+05:30").getTime();
 
 setInterval(() => {
@@ -484,6 +487,9 @@ setInterval(() => {
   document.getElementById("s").innerHTML = seconds;
 }, 1000);
 </script>
+
+
+
 <!-- MAP -->
 <div class="map-section">
   <h2>BR BERMUDA  MAP</h2>
@@ -508,17 +514,40 @@ setInterval(() => {
 </div>
 
 <!-- SOCIAL FLOAT ICONS -->
-<div class="social">
-  <!-- YOUTUBE -->
-  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">
-    <img src="youtube.png">
-  </a>
-
-  <!-- INSTAGRAM -->
+<!-- INSTAGRAM - LEFT -->
+<div class="social-left">
   <a href="https://instagram.com/freefirexipl.2k26" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
   </a>
 </div>
+
+<!-- YOUTUBE - RIGHT -->
+<div class="social-right">
+  <a href="http://www.youtube.com/@SCRSgamers-y7u" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="40">
+  </a>
+</div>
+<style>.social-left{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  z-index:3000;
+}
+
+.social-right{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:3000;
+}
+
+.social-left img,
+.social-right img{
+  width:50px;
+  height:50px;
+  animation:float 2s infinite;
+}
+</style>
 
 
 <!-- FOOTER -->
@@ -572,14 +601,5 @@ confirmBtn.onclick = () => {
 };
 </script>
 
-
-
-
-
-
-
 </body>
 </html>
-
-
-
